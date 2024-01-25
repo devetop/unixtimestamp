@@ -57,10 +57,11 @@
 	
 	<script>
 		function copyText() {
+  		  var epoch = Math.floor(Date.now() / 1000);
 	
 			/* Copy text into clipboard */
 			navigator.clipboard.writeText
-				("Geeksforgeeks is best learning platform.");
+				(epoch.value);
 		}
 	</script>
 </body>
