@@ -56,13 +56,12 @@
 	<textarea id="textbox"></textarea>
 	
 	<script>
-		function copyText() {
-  		  var epoch = Math.floor(Date.now() / 1000);
-	
-			/* Copy text into clipboard */
-			navigator.clipboard.writeText
-				(epoch.value);
-		}
+let epoch = Math.floor(Date.now() / 1000);
+function myFunction() {
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(epoch);
+}
 	</script>
 </body>
 </html>

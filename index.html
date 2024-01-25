@@ -3255,7 +3255,7 @@
                                         </div>
                                     </div>
                                     <br/>
-                                    <button class="small ui basic black button" onclick="copyTextToClipboard('', this, 'Copied!');">Copy</button>
+                                    <button class="small ui basic black button" onclick="copyUnixtime();">Copy</button>
                                 </div>
                             </div>
                         </div>
@@ -3282,7 +3282,14 @@
                                 </tr>
                             </table>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+let epoch = Math.floor(Date.now() / 1000);
+function copyUnixtime() {
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(epoch);
+}
+ 
+   document.addEventListener('DOMContentLoaded', function() {
         // year
         var yearInput = document.getElementById('y');
         var d = new Date().getFullYear();
