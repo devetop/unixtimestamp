@@ -3283,34 +3283,30 @@
                             </table>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // unixtimestamp
-        var timestampInput = document.getElementById('timestamp');
-        var currentTimestamp = new Date(unixTimestamp * 1000);
-        timestampInput.value = currentTimestamp.toString();
         // year
         var yearInput = document.getElementById('y');
-        var currentYear = new Date().getFullYear();
-        yearInput.value = currentYear.toString();
+        var d = new Date().getFullYear();
+        yearInput.value = d.toString();
         // month
         var monthInput = document.getElementById('m');
         var d = new Date().getMonth() + 1;
         monthInput.value = d.toString();
         // day
-        var monthInput = document.getElementById('d');
+        var dayInput = document.getElementById('d');
         var d = new Date().getDate();
-        monthInput.value = d.toString();
+        dayInput.value = d.toString();
         // hour
-        var monthInput = document.getElementById('hours');
+        var hourInput = document.getElementById('hours');
         var d = new Date().getHours();
-        monthInput.value = d.toString();
+        hourInput.value = d.toString();
         // minutes
-        var monthInput = document.getElementById('min');
+        var minInput = document.getElementById('min');
         var d = new Date().getMinutes();
-        monthInput.value = d.toString();
+        minInput.value = d.toString();
         // sec
-        var monthInput = document.getElementById('sec');
+        var secInput = document.getElementById('sec');
         var d = new Date().getSeconds();
-        monthInput.value = d.toString();
+        secInput.value = d.toString();
     });
 </script>
                             <h5>Enter a Date & Time</h5>
@@ -3365,7 +3361,7 @@
                 </div>
             </div>
             <script>
-                var epoch = 0;
+                var epoch = Math.floor(Date.now() / 1000);
 
                 function incrementEpoch() {
                     updateClock();
