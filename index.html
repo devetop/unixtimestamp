@@ -3283,6 +3283,10 @@
                             </table>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // unixtimestamp
+        var timestampInput = document.getElementById('timestamp');
+        var currentTimestamp = new Date(unixTimestamp * 1000);
+        timestampInput.value = currentTimestamp.toString();
         // year
         var yearInput = document.getElementById('y');
         var currentYear = new Date().getFullYear();
